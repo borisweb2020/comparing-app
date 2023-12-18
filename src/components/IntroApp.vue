@@ -43,36 +43,6 @@
 					</div>
 					<div class="intro__item-name">Samsung Galaxy A72</div>
 				</div>
-
-				<div class="intro__item">
-					<div class="intro__item-wrapper">
-						<img class="intro__item-img" src="../assets/images/samsung-72.jpg" alt="phone">
-						<button class="intro__item-btn">
-							<img src="../assets/images/arrow-down.svg" alt="arrow">
-						</button>
-					</div>
-					<div class="intro__item-name">Samsung Galaxy A72</div>
-				</div>
-				<div class="intro__item">
-					<div class="intro__item-wrapper">
-						<img class="intro__item-img" src="../assets/images/xiaomi-11.jpg" alt="phone">
-						<button class="intro__item-btn">
-							<img src="../assets/images/arrow-down.svg" alt="arrow">
-						</button>
-					</div>
-					<div class="intro__item-name">Xiaomi Mi 11 Lite</div>
-				</div>
-				<div class="intro__item">
-					<div class="intro__item-wrapper">
-						<img class="intro__item-img" src="../assets/images/apple-12.jpg" alt="phone">
-						<button class="intro__item-btn">
-							<img src="../assets/images/arrow-down.svg" alt="arrow">
-						</button>
-					</div>
-					<div class="intro__item-name">Apple iPhone 12</div>
-				</div>
-
-
 			</div>
 		</div>
 	</section>
