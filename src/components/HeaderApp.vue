@@ -21,12 +21,11 @@
 	</header>
 </template>
 
-<script lang="ts">
-	import { defineComponent } from 'vue';
+<script>
 
-	export default defineComponent ({
-		name: 'HeaderApp'
-	});
+	export default {
+
+	}
 </script>
 
 <style lang="scss" scoped>
