@@ -13,7 +13,9 @@
 		<div class="intro__content">
 			<div class="intro__checkbox">
 				<input class="intro__checkbox-input" type="checkbox" id="checkbox">
-				<label class="intro__checkbox-label" for="checkbox">Показать различия</label>
+				<label class="intro__checkbox-label" for="checkbox">
+					<span>Показать различия</span>
+				</label>
 			</div>
 			<div class="intro__inner">
 				<div class="intro__item">

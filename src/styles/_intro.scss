@@ -53,21 +53,57 @@
 	&__checkbox{
 		align-self: flex-end;
 		margin-right: 6.25vw; // 90px
+		position: relative;
 	}
 
 	&__checkbox-input{
-		margin: 0;
-		width: 24px;
-		height: 24px;
-		border: 2px solid #c1c1c2;
-		border-radius: 5px;
 		appearance: none;
+		position: absolute;
 	}
 
 	&__checkbox-label{
 		color: $blue;
 		letter-spacing: 0.36px;
-		margin-left: 14px;
+		padding-left: 35px;
+		display: flex;
+		height: 24px;
+		cursor: pointer;
+		align-items: end;
+	}
+
+	&__checkbox-label::before{
+		content: "";
+		display: block;
+		width: 24px;
+		height: 24px;
+		border: 2px solid #c1c1c2;
+		border-radius: 5px;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+
+	&__checkbox-label::after{
+		content: "";
+		display: block;
+		width: 24px;
+		height: 24px;
+		background: url("@/assets/images/check-mark.svg") no-repeat center;
+		background-size: 18px 18px;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 3;
+
+		opacity: 0;
+		transition: opacity .1s linear;
+	}
+
+	&__checkbox-input:checked + .intro__checkbox-label::after{
+		opacity: 1;
 	}
 
 	&__inner{
