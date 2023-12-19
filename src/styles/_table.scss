@@ -8,9 +8,7 @@
 		display: flex;
 	}
 
-	&__header{
-		margin-right: 30px;
-	}
+
 
 	&__header-item,
 	&__smart-item{
@@ -18,14 +16,20 @@
 		border-top: 1px solid #cdcfd2;
 		border-bottom: 1px solid #cdcfd2;
 
-		max-width: 255px;
 		display: flex;
 		align-items: center;
 	}
 
 	&__header-item{
+		max-width: 255px;
 		color: #a4a9b9;
 		text-transform: uppercase;
+	}
+
+	&__smart-item > img{
+		display: inline-block;
+		width: 22px;
+		height: 22px;
 	}
 
 	&__smart{

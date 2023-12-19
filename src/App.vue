@@ -3,7 +3,7 @@
   <div class="container">
     <intro-app :smarts="smartphonesDisplay" @point="changeCount"></intro-app>
   </div>
-  <table-app></table-app>
+  <table-app :smarts="smartphonesDisplay"></table-app>
 </template>
 
 <script>

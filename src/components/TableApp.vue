@@ -14,41 +14,27 @@
 					<div class="table__header-item">поддержка беспроводной зарядки</div>
 					<div class="table__header-item">стоимость</div>
 				</div>
-				<div class="table__smart">
-					<div class="table__smart-item">Apple</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-				</div>
-				<div class="table__smart">
-					<div class="table__smart-item">Xiaomi</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-				</div>
-				<div class="table__smart">
-					<div class="table__smart-item">Samsung</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
-					<div class="table__smart-item">Lorem</div>
+				<div class="table__smart"
+				v-for="(item, index) in smarts" :key="index">
+					<div class="table__smart-item">{{ item.producer.split(' ')[0] }}</div>
+					<div class="table__smart-item">{{ item.release }}</div>
+					<div class="table__smart-item">{{ item.diagonal }}</div>
+					<div class="table__smart-item">{{ item.state }}</div>
+					<div class="table__smart-item">{{ item.memory }}</div>
+					<div class="table__smart-item">{{ item.refresh }}</div>
+					<div class="table__smart-item">
+						<img v-if="item.nfc" src="../assets/images/check-green.svg" alt="true mark">
+						<img v-else src="../assets/images/deny-red.svg" alt="false mark">
+					</div>
+					<div class="table__smart-item">
+						<img v-if="item.esim" src="../assets/images/check-green.svg" alt="true mark">
+						<img v-else src="../assets/images/deny-red.svg" alt="false mark">
+					</div>
+					<div class="table__smart-item">
+						<img v-if="item.charging" src="../assets/images/check-green.svg" alt="true mark">
+						<img v-else src="../assets/images/deny-red.svg" alt="false mark">
+					</div>
+					<div class="table__smart-item">{{ item.price }}</div>
 				</div>
 			</div>
 		</div>
@@ -58,7 +44,12 @@
 <script>
 
 	export default {
-
+		props: {
+			smarts: {
+				type: Array,
+				required: true
+			}
+		}
 	}
 </script>
 
