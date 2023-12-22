@@ -114,6 +114,10 @@
 		row-gap: 25px;
 	}
 
+	&__item{
+		position: relative;
+	}
+
 	&__item-wrapper{
 		margin-bottom: 8px;
 		position: relative;

@@ -4,14 +4,12 @@
     <intro-app :smarts="smartphonesDisplay" @point="changeCount"></intro-app>
   </div>
   <table-app :smarts="smartphonesDisplay"></table-app>
-  <modal-app></modal-app>
 </template>
 
 <script>
   import HeaderApp from '@/components/HeaderApp.vue';
   import IntroApp from '@/components/IntroApp.vue';
   import TableApp from '@/components/TableApp.vue';
-  import ModalApp from '@/components/ModalApp.vue';
 
   export default {
 
@@ -19,7 +17,6 @@
       HeaderApp,
       IntroApp,
       TableApp,
-      ModalApp
     },
 
     data(){

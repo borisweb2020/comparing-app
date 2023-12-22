@@ -29,6 +29,7 @@
 						</button>
 					</div>
 					<div class="intro__item-name">{{ item.producer }}</div>
+					<modal-app></modal-app>
 				</div>
 			</div>
 		</div>
@@ -36,8 +37,13 @@
 </template>
 
 <script>
+	import ModalApp from '@/components/ModalApp.vue';
 
 	export default {
+		components: {
+			ModalApp,
+		},
+
 		data(){
 			return{
 				count: 3,

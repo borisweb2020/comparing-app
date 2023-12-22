@@ -1,13 +1,17 @@
 .modal{
 	padding: 30px 20px 25px;
 	width: 420px;
-	height: 335px;
+	height: 336px;
 	border: 1px solid #e3e3e3;
 	border-radius: 4px;
 	box-shadow: 0 16px 32px 0 rgba(35, 39, 51, .1);
 	overflow-y: scroll;
+	background-color: #fff;
 
-
+	position: absolute;
+	top: 40%;
+	left: 30%;
+	z-index: 5;
 
 
 	&__input{
