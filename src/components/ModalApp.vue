@@ -1,9 +1,9 @@
 <template>
-	<div class="modal">
-		<input  class="modal__input" type="text" placeholder="Поиск">
+	<div class="modal" @click="updateModal">
+		<input  class="modal__input" type="text" placeholder="Поиск" @click.stop>
 		<ul class="modal__list">
 			<li class="modal__item">
-				<button class="modal__btn">
+				<button class="modal__btn" @click.stop>
 					<img class="modal__btn-img" src="../assets/images/reverse-arrows.svg" alt="btn">
 				</button>
 				<div class="modal__item-wrapper">
@@ -34,7 +34,12 @@
 </template>
 <script>
 	export default {
-
+		methods: {
+			updateModal(){
+				const newValue = false;
+				this.$emit('closeModal', newValue);
+			}
+		}
 	}
 </script>
 <style lang="scss">

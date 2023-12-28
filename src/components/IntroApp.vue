@@ -24,12 +24,15 @@
 				<div class="intro__item" v-for="(item, index) in smarts" :key="index">
 					<div class="intro__item-wrapper">
 						<img class="intro__item-img" :src="item.url" alt="phone">
-						<button class="intro__item-btn">
+						<button class="intro__item-btn" type="button"
+						@click="showModal(index)">
 							<img src="../assets/images/arrow-down.svg" alt="arrow">
 						</button>
 					</div>
 					<div class="intro__item-name">{{ item.producer }}</div>
-					<modal-app></modal-app>
+					<modal-app v-if="modalWindow && modalIndex === index"
+					:modalIndex="modalIndex"
+					@closeModal="hideModal"></modal-app>
 				</div>
 			</div>
 		</div>
@@ -47,6 +50,8 @@
 		data(){
 			return{
 				count: 3,
+				modalWindow: false,
+				modalIndex: null,
 			}
 		},
 
@@ -54,6 +59,13 @@
 			pointCount(index){
 				this.count = (index + 2);
 				this.$emit('point', this.count);
+			},
+			showModal(value){
+				this.modalWindow = true;
+				this.modalIndex = value;
+			},
+			hideModal(value){
+				this.modalWindow = value;
 			}
 		},
 
